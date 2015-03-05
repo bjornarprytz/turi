@@ -36,8 +36,6 @@ Rails.application.routes.draw do
     resources :friendships
   end
 
-
-
   get '/dashboard', to: 'dashboard#index', as: 'dashboard'
 
   # Explore
