@@ -252,7 +252,6 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
   bcrypt (~> 3.1.7)
-  bundler (>= 1.7.0)
   byebug
   capybara
   codeclimate-test-reporter
@@ -261,7 +260,6 @@ DEPENDENCIES
   dropbox-sdk
   email_spec
   factory_girl_rails
-  geocoder
   gravtastic
   jbuilder (~> 2.0)
   jquery-rails

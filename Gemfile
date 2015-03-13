@@ -42,6 +42,17 @@ gem 'pundit'
 # Dropbox
 gem 'dropbox-sdk'
 
+# Geocoding (find lat/lng by adress)
+gem 'geocoder'
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+source 'https://rails-assets.org' do
+  # Only jQuery should be included as extra gem, any other JS library should be included from rails-assets
+  gem 'rails-assets-leaflet'
+end
+
 # RestClient
 gem 'rest-client'
 
