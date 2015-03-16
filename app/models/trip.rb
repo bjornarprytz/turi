@@ -10,6 +10,7 @@ class Trip < ActiveRecord::Base
   has_many :articles, :dependent => :delete_all
   has_many :discussions, :dependent => :delete_all
   has_many :routes, :dependent => :delete_all
+  has_many :articles, :dependent => :delete_all
 
   validates_presence_of :title
 
