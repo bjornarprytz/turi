@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310095322) do
+ActiveRecord::Schema.define(version: 20150508012530) do
 
   create_table "api_access_tokens", force: :cascade do |t|
     t.integer  "user_id"
@@ -90,17 +90,6 @@ ActiveRecord::Schema.define(version: 20150310095322) do
 
   add_index "equipment_items", ["equipment_list_id"], name: "index_equipment_items_on_equipment_list_id"
   add_index "equipment_items", ["user_id"], name: "index_equipment_items_on_user_id"
-=======
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.integer  "trip_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "articles", ["trip_id"], name: "index_articles_on_trip_id"
->>>>>>> Started work on blog framework.
 
   create_table "equipment_lists", force: :cascade do |t|
     t.string   "name"
@@ -113,31 +102,7 @@ ActiveRecord::Schema.define(version: 20150310095322) do
   end
 
   add_index "equipment_lists", ["trip_id"], name: "index_equipment_lists_on_trip_id"
-
-  create_table "events", force: :cascade do |t|
-    t.string   "name",                     null: false
-    t.text     "description", default: ""
-    t.string   "color",                    null: false
-    t.datetime "start_date",               null: false
-    t.datetime "end_date",                 null: false
-    t.integer  "trip_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "location"
-    t.boolean  "all_day"
-  end
-
-  add_index "events", ["trip_id"], name: "index_events_on_trip_id"
   add_index "equipment_lists", ["user_id"], name: "index_equipment_lists_on_user_id"
-
-  create_table "friendships", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "friend_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "friendships", ["user_id", "friend_id"], name: "index_friendships_on_user_id_and_friend_id", unique: true
 
   create_table "events", force: :cascade do |t|
     t.string   "name",                     null: false
