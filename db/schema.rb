@@ -154,7 +154,6 @@ ActiveRecord::Schema.define(version: 20150508012530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "trip_id"
-    t.boolean  "public",     default: false
   end
 
   add_index "routes", ["trip_id"], name: "index_routes_on_trip_id"
